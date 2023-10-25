@@ -4,5 +4,5 @@ import type { LayoutServerLoad } from "./$types";
 
 export const load: LayoutServerLoad = async ({ cookies, parent }) => {
   const parentData = await parent();
-  if (!parentData.user.isAdmin) throw redirect(301, "/");
+  if (!parentData.user.isAdmin) throw redirect(302, "/");
 };
